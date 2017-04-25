@@ -5,4 +5,20 @@
     <string name="drawer_open">Mo menu</string>
     <string name="drawer_close">Dong menu</string>
 
+    <string name="txt_ThongTinTaiKhoan">THÔNG TIN TÀI KHOẢN</string>
+    <string name="txt_Ho">Họ:</string>
+    <string name="edt_Ho">Nhập họ</string>
+    <string name="txt_Ten">Tên:</string>
+    <string name="edt_Ten">Nhập tên</string>
+    <string name="txt_NgaySinh">Ngày sinh:</string>
+    <string name="edt_NgaySinh">Nhập ngày sinh</string>
+    <string name="txt_Email">Email:</string>
+    <string name="edt_Email">Nhập Email</string>
+    <string name="txt_SDT">SDT:</string>
+    <string name="edt_SDT">Nhập SDT</string>
+    <string name="txt_DiaChi">Địa chỉ:</string>
+    <string name="txt_Gia">Giá:</string>
+    <string name="edt_DiaChi">Nhập địa chỉ</string>
+    <string name="edt_GhiChu">Ghi chú</string>
+    <string name="btn_XacNhan">XÁC NHẬN</string>
 </resources>
