@@ -34,7 +34,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         DuLieu dulieu = new DuLieu(getApplicationContext());
-
+        dulieu.getWritableDatabase();
 
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
