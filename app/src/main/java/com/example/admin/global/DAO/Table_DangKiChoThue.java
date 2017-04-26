@@ -22,6 +22,8 @@ public class Table_DangKiChoThue {
     private static final String DANGKICHOTHUE_DIACHI = "DiaChi";
     private static final String DANGKICHOTHUE_GIA = "Gia";
     private static final String DANGKICHOTHUE_GHICHU = "GhiChu";
+    private static final String DANGKICHOTHUE_X = "X";
+    private static final String DANGKICHOTHUE_Y = "Y";
     private static final String DANGKICHOTHUE_THONGTINTAIKHOAN_MATK = "MaTK";
 
 
@@ -29,9 +31,11 @@ public class Table_DangKiChoThue {
 
 
     //CREATE TABLE DANG KI CHO THUE
-    public static final String CREATE_TABLE_DANGKICHOTHUE ="CREATE TABLE "+TABLE_DANGKICHOTHUE+" ("+DANGKICHOTHUE_MaCT+
-            " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            ""+DANGKICHOTHUE_DIACHI+" TEXT, "+DANGKICHOTHUE_GIA+" TEXT, "
-            +DANGKICHOTHUE_GHICHU+" TEXT, "+DANGKICHOTHUE_THONGTINTAIKHOAN_MATK+" INTEGER CONSTRAINT " +
-            "FK_ThongTinTaiKhoan REFERENCES "+TABLE_THONGTINTAIKHOAN+" ON UPDATE CASCADE)";
+    public static final String CREATE_TABLE_DANGKICHOTHUE ="CREATE TABLE "+TABLE_DANGKICHOTHUE+" ("
+                                                            +DANGKICHOTHUE_MaCT+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                                                            +DANGKICHOTHUE_DIACHI+" TEXT, "+DANGKICHOTHUE_GIA+" TEXT, "
+                                                            +DANGKICHOTHUE_GHICHU+" TEXT, " +DANGKICHOTHUE_X+" REAL, "
+                                                            +DANGKICHOTHUE_Y+" REAL, "+DANGKICHOTHUE_THONGTINTAIKHOAN_MATK
+                                                            +" INTEGER CONSTRAINT FK_ThongTinTaiKhoan REFERENCES "
+                                                            +TABLE_THONGTINTAIKHOAN+" ON UPDATE CASCADE)";
 }
