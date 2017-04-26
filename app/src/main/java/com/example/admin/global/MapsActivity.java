@@ -21,7 +21,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends AppCompatActivity{
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback{
 
     private GoogleMap mMap;
 
@@ -32,14 +32,13 @@ public class MapsActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thong_tin_tai_khoan);
+        setContentView(R.layout.activity_maps);
         DuLieu dulieu = new DuLieu(getApplicationContext());
-       // Intent intent = new Intent(this,);
-       // startActivity(intent);
 
-        // implements OnMapReadyCallback
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-      /*  SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+       SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         //set new custom toolbar -> default actionbar
@@ -57,7 +56,7 @@ public class MapsActivity extends AppCompatActivity{
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 return false;
             }
-        });*/
+        });
 
 
 
@@ -73,7 +72,7 @@ public class MapsActivity extends AppCompatActivity{
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
-  /*  @Override
+   @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
@@ -87,5 +86,5 @@ public class MapsActivity extends AppCompatActivity{
             mMap.setMyLocationEnabled(true);
         } else {
         }
-    }*/
+    }
 }
