@@ -29,7 +29,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        DN = (EditText) findViewById(R.id.txtTenDN);
+        TTTK = new Table_ThongTinTaiKhoan(getApplicationContext());
+        DN = (EditText) findViewById(R.id.txtTK);
         MK = (EditText) findViewById(R.id.txtMK);
         MK2 = (EditText) findViewById(R.id.txtMK2);
         Ho = (EditText) findViewById(R.id.txtHo);
@@ -46,15 +47,16 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String tMK = MK.getText().toString();
                 String tMK2 = MK2.getText().toString();
-                if (MK != MK2)
-                    Info.setTextColor(Color.RED);
+                if (!tMK.equals(tMK2))
+                    //Info.setTextColor(Color.RED);
+                ;
                 else {
                     String tDN = DN.getText().toString();
                     String tHo = Ho.getText().toString();
                     String tTen = Ten.getText().toString();
                     String tNS = NS.getText().toString();
                     String tDC = DC.getText().toString();
-                    int tSDT = Integer.valueOf(DN.getText().toString());
+                    int tSDT = Integer.valueOf(DT.getText().toString());
                     String tEmail = Email.getText().toString();
                     int tLoaiTK;
                     if (LoaiTK.isChecked())

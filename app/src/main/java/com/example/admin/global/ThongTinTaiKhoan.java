@@ -1,5 +1,6 @@
 package com.example.admin.global;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,13 +22,15 @@ public class ThongTinTaiKhoan extends AppCompatActivity {
     MultiAutoCompleteTextView mulAuTxtGhiChu;
     Button btbXacNhan;
     int bien;
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thong_tin_tai_khoan);
         findViewIDThongTinTaiKhoan();
         tbThongTinTaiKhoan = new Table_ThongTinTaiKhoan(getApplicationContext());
-
+        intent = getIntent();
+        bien = intent.getIntExtra("key", 1);
         user = tbThongTinTaiKhoan.hienThi(bien);
 
         edtHo.setText(user.getHo().toString());

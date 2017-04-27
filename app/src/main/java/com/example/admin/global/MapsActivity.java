@@ -29,6 +29,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     ActionBarDrawerToggle drawertoggle;
     Toolbar toolbar;
 
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
@@ -54,6 +55,20 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.tt_taikhoan:
+                        intent = new Intent(MapsActivity.this, ThongTinTaiKhoan.class);
+                        intent.putExtra("key", 1);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_gallery:
+                        intent = new Intent(MapsActivity.this, ThongTinTaiKhoan.class);
+                        intent.putExtra("key", 1);
+                        startActivity(intent);
+                        break;
+                }
+                //drawer.closeDrawer(GravityCompat.START);
                 return false;
             }
         });
