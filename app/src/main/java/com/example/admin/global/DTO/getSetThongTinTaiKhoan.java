@@ -14,6 +14,7 @@ public class getSetThongTinTaiKhoan {
     private String email;
     private String ghichu;
 
+<<<<<<< HEAD
     public getSetThongTinTaiKhoan(int matk, String ho, String ten, String ngaysinh, int sdt, String diachi, String email, String ghichu) {
         this.matk = matk;
         this.ho = ho;
@@ -26,6 +27,17 @@ public class getSetThongTinTaiKhoan {
     }
 
     public getSetThongTinTaiKhoan(String ho, String ten, String ngaysinh, int sdt, String diachi, String email, String ghichu){
+=======
+    private int loaitk;
+    private String tendangnhap;
+    private String matkhau;
+
+
+
+    public getSetThongTinTaiKhoan(String ho, String ten, String ngaysinh, int sdt, String diachi,
+                                  String email, String ghichu, int loaitk, String tendangnhap, String matkhau){
+
+>>>>>>> f5f3da90f8c343ce4ca1de6665a6abd5d24b2dfc
         this.ho = ho;
         this.ten = ten;
         this.ngaysinh = ngaysinh;
@@ -34,7 +46,35 @@ public class getSetThongTinTaiKhoan {
 
         this.email = email;
         this.ghichu = ghichu;
+        this.loaitk = loaitk;
+        this.tendangnhap = tendangnhap;
+        this.matkhau = matkhau;
     }
+  
+    public void setLoaitk(int loaitk) {
+        this.loaitk = loaitk;
+    }
+
+    public void setMatkhau(String matkhau) {
+        this.matkhau = matkhau;
+    }
+
+    public void setTendangnhap(String tendangnhap) {
+        this.tendangnhap = tendangnhap;
+    }
+
+    public int getLoaitk() {
+        return loaitk;
+    }
+
+    public String getTendangnhap() {
+        return tendangnhap;
+    }
+
+    public String getMatkhau() {
+        return matkhau;
+    }
+
     public int getMatk() {
         return matk;
     }

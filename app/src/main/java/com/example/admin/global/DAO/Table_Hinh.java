@@ -1,5 +1,10 @@
 package com.example.admin.global.DAO;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.example.admin.global.DTO.DuLieu;
+
 import static com.example.admin.global.DAO.Table_DangKiChoThue.TABLE_DANGKICHOTHUE;
 
 /**
@@ -7,6 +12,8 @@ import static com.example.admin.global.DAO.Table_DangKiChoThue.TABLE_DANGKICHOTH
  */
 
 public class Table_Hinh {
+
+    SQLiteDatabase myDB;
     private static final String TABLE_HINH= "Hinh";
     public static String getTableHinh() {
         return TABLE_HINH;
@@ -20,4 +27,9 @@ public class Table_Hinh {
             +HINH_TENHINH+" TEXT,  "+HINH_DANGKICHOTHUE_MACT+
             " INTEGER CONSTRAINT FK_DangKiChoThue REFERENCES "+TABLE_DANGKICHOTHUE+
             " ON UPDATE CASCADE)";
+
+    public Table_Hinh(Context context) {
+        DuLieu dulieu = new DuLieu(context);
+        myDB = dulieu.getWritableDatabase();
+    }
 }
