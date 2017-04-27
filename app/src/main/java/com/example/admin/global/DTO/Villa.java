@@ -65,7 +65,7 @@ public class Villa {
         this.y = y;
     }
 
-    public Villa(int maCT, String diachi, String gia, String ghichu, int maTK, double x, double y) {
+    public Villa(int maCT,String diachi, String gia, String ghichu, int maTK, double x, double y) {
         this.maCT = maCT;
         this.diachi = diachi;
         this.gia = gia;
