@@ -20,12 +20,12 @@ public class VillaDAO {
     Context context;
     DuLieu myData;
     SQLiteDatabase db;
-
+    long id;
     public VillaDAO(Context context) {
         myData = new DuLieu(context);
     }
 
-    public void Add(Villa dept){
+    public boolean Add(Villa dept){
         db = myData.getWritableDatabase();
 //Bổ sung tracsaction
         ContentValues values = new ContentValues();
@@ -37,7 +37,10 @@ public class VillaDAO {
         values.put("X", dept.getX());
         values.put("Y", dept.getY());
 
-        db.insert(Table_DangKiChoThue.getTableDangkichothue(),null,values);
+        id = db.insert(Table_DangKiChoThue.getTableDangkichothue(),null,values);
+        if(id == -1)
+            return false;
+        return true;
     }
     public List<Villa> getVilla(){
         List<Villa> templist = new ArrayList<Villa>();

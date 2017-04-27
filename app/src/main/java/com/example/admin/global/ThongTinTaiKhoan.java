@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.Toast;
 
 import com.example.admin.global.DAO.Table_ThongTinTaiKhoan;
 import com.example.admin.global.DTO.getSetThongTinTaiKhoan;
@@ -27,20 +28,18 @@ public class ThongTinTaiKhoan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thong_tin_tai_khoan);
-        findViewIDThongTinTaiKhoan();
-        tbThongTinTaiKhoan = new Table_ThongTinTaiKhoan(getApplicationContext());
-        intent = getIntent();
-        bien = intent.getIntExtra("key", 1);
-        user = tbThongTinTaiKhoan.hienThi(bien);
 
-        edtHo.setText(user.getHo().toString());
-        edtTen.setText(user.getTen().toString());
-        edtSDT.setText(String.valueOf(user.getSdt()).toString());
-        edtNgaySinh.setText(user.getNgaysinh().toString());
-        edtDiaChi.setText(user.getDiachi().toString());
-        edtEmail.setText(user.getEmail().toString());
-        mulAuTxtGhiChu.setText(user.getGhichu().toString());
+        tbThongTinTaiKhoan = new Table_ThongTinTaiKhoan(getApplicationContext());
+        findViewIDThongTinTaiKhoan();
+        showThongTinTaiKhoan();
+        btbXacNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                submitXacNhan();
+            }
+        });
     }
+
     public void findViewIDThongTinTaiKhoan(){
         edtHo = (EditText)findViewById(R.id.edtHo);
         edtTen = (EditText)findViewById(R.id.edtTen);
@@ -51,21 +50,30 @@ public class ThongTinTaiKhoan extends AppCompatActivity {
         mulAuTxtGhiChu = (MultiAutoCompleteTextView)findViewById(R.id.mulAuTxtGhiChu);
         btbXacNhan = (Button)findViewById(R.id.btnXacNhan);
     }
-    public void submitXacNhan(View view){
-        String ho = edtHo.getText().toString();
-        String ten = edtTen.getText().toString();
-        int sdt = Integer.parseInt(edtSDT.getText().toString());
+
+    public void submitXacNhan(){
+
+
         String diachi = edtDiaChi.getText().toString();
-        String ngaysinh = edtNgaySinh.getText().toString();
         String email = edtEmail.getText().toString();
         String ghichu = mulAuTxtGhiChu.getText().toString();
-        user = new getSetThongTinTaiKhoan(ho, ten, ngaysinh, sdt, ngaysinh, email, ghichu ,0, "", "" );
-
+        user = new getSetThongTinTaiKhoan(bien, "", "", "", 0, diachi, email, ghichu , 0, "", "" );
         boolean tk = tbThongTinTaiKhoan.sua_ThongTinTaiKhoan(user);
-
-
+        if (tk)
+            Toast.makeText(this, "Sửa thành công", Toast.LENGTH_SHORT).show();
+        else Toast.makeText(this, "Không sửa được", Toast.LENGTH_SHORT).show();
     }
-    public void showThongTinTaiKhoan(){
 
+    public void showThongTinTaiKhoan(){
+        intent = getIntent();
+        bien = intent.getIntExtra("key", 1);
+        user = tbThongTinTaiKhoan.hienThi(bien);
+        edtHo.setText(user.getHo().toString());
+        edtTen.setText(user.getTen().toString());
+        edtSDT.setText(String.valueOf(user.getSdt()).toString());
+        edtNgaySinh.setText(user.getNgaysinh().toString());
+        edtDiaChi.setText(user.getDiachi().toString());
+        edtEmail.setText(user.getEmail().toString());
+        mulAuTxtGhiChu.setText(user.getGhichu().toString());
     }
 }

@@ -75,6 +75,7 @@ public class Table_ThongTinTaiKhoan {
     }
     public boolean sua_ThongTinTaiKhoan(getSetThongTinTaiKhoan tttk){
         ContentValues values = new ContentValues();
+
         values.put(THONGTINTAIKHOAN_DIACHI, tttk.getDiachi());
         values.put(THONGTINTAIKHOAN_EMAIL, tttk.getEmail());
         values.put(THONGTINTAIKHOAN_GHICHU, tttk.getGhichu());
@@ -135,6 +136,7 @@ public class Table_ThongTinTaiKhoan {
         }
         return templist;
     }
+
     public getSetThongTinTaiKhoan hienThi(int tk){
         String sql = "SELECT * FROM " + TABLE_THONGTINTAIKHOAN+" WHERE MaTK = "+ tk;
         Cursor cur = myDB.rawQuery(sql, null);
