@@ -6,28 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.admin.global.MapsActivity" >
 
-    <android.support.v4.widget.DrawerLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/drawer_layout">
-
-        <fragment
-            android:id="@+id/map"
-            class="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <include
-            layout="@layout/toolbar" />
-
-        <android.support.design.widget.NavigationView
-            android:id="@+id/navigation_view"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:menu="@menu/navigation" />
-
-    </android.support.v4.widget.DrawerLayout>
-
+    <include
+        layout="@layout/temp_lay" />
 
 </LinearLayout>
