@@ -2,19 +2,15 @@ package com.example.admin.global;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ThemedSpinnerAdapter;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
-import android.widget.Toast;
 
 import com.example.admin.global.DAO.Table_ThongTinTaiKhoan;
-import com.example.admin.global.getSetTable.getSetThongTinTaiKhoan;
+import com.example.admin.global.DTO.getSetThongTinTaiKhoan;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ThongTinTaiKhoan extends AppCompatActivity {
 

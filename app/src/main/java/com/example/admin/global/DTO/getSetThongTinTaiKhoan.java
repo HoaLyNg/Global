@@ -1,4 +1,4 @@
-package com.example.admin.global.getSetTable;
+package com.example.admin.global.DTO;
 
 /**
  * Created by User on 26/04/2017.
@@ -15,7 +15,6 @@ public class getSetThongTinTaiKhoan {
     private String ghichu;
 
     public getSetThongTinTaiKhoan(String ho, String ten, String ngaysinh, int sdt, String diachi, String email, String ghichu){
-
         this.ho = ho;
         this.ten = ten;
         this.ngaysinh = ngaysinh;

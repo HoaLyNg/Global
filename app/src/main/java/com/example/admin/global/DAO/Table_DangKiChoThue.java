@@ -6,7 +6,7 @@ import static com.example.admin.global.DAO.Table_ThongTinTaiKhoan.TABLE_THONGTIN
  * Created by User on 26/04/2017.
  */
 
-public class Table_DangKiChoThue {
+public class Table_DangKiChoThue  {
     public static final String TABLE_DANGKICHOTHUE = "DangKiChoThue";
 
     public static String getTableDangkichothue() {
