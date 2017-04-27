@@ -13,6 +13,7 @@ public class getSetThongTinTaiKhoan {
     private String diachi;
     private String email;
     private String ghichu;
+
     private int loaitk;
     private String tendangnhap;
     private String matkhau;
@@ -33,6 +34,7 @@ public class getSetThongTinTaiKhoan {
         this.tendangnhap = tendangnhap;
         this.matkhau = matkhau;
     }
+  
     public void setLoaitk(int loaitk) {
         this.loaitk = loaitk;
     }
@@ -44,8 +46,6 @@ public class getSetThongTinTaiKhoan {
     public void setTendangnhap(String tendangnhap) {
         this.tendangnhap = tendangnhap;
     }
-
-
 
     public int getLoaitk() {
         return loaitk;
