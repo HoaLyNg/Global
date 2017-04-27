@@ -1,4 +1,4 @@
-package com.example.admin.global.getSetTable;
+package com.example.admin.global.DTO;
 
 /**
  * Created by User on 26/04/2017.

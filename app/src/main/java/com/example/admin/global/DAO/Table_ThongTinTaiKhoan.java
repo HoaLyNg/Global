@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.admin.global.DTO.DuLieu;
-import com.example.admin.global.getSetTable.getSetThongTinTaiKhoan;
+import com.example.admin.global.DTO.getSetThongTinTaiKhoan;
 
 import java.util.ArrayList;
 
