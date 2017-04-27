@@ -27,7 +27,9 @@ public class ThongTinTaiKhoan extends AppCompatActivity {
         setContentView(R.layout.activity_thong_tin_tai_khoan);
         findViewIDThongTinTaiKhoan();
         tbThongTinTaiKhoan = new Table_ThongTinTaiKhoan(getApplicationContext());
+
         user = tbThongTinTaiKhoan.hienThi(bien);
+
         edtHo.setText(user.getHo().toString());
         edtTen.setText(user.getTen().toString());
         edtSDT.setText(String.valueOf(user.getSdt()).toString());
@@ -47,30 +49,18 @@ public class ThongTinTaiKhoan extends AppCompatActivity {
         btbXacNhan = (Button)findViewById(R.id.btnXacNhan);
     }
     public void submitXacNhan(View view){
-
-       /* String ho = edtHo.getText().toString();
+        String ho = edtHo.getText().toString();
         String ten = edtTen.getText().toString();
-        String ngaysinh = edtNgaySinh.getText().toString();
-        int sdt =  Integer.parseInt(edtSDT.getText().toString());
+        int sdt = Integer.parseInt(edtSDT.getText().toString());
         String diachi = edtDiaChi.getText().toString();
+        String ngaysinh = edtNgaySinh.getText().toString();
         String email = edtEmail.getText().toString();
         String ghichu = mulAuTxtGhiChu.getText().toString();
-        if(!TextUtils.isEmpty(ho)){
-            getSetThongTinTaiKhoan tk = new getSetThongTinTaiKhoan(ho,ten, ngaysinh, sdt, diachi, email, ghichu );
-            tbThongTinTaiKhoan.them_ThongTinTaiKhoan(tk);
-        }
-        else{
-            Toast.makeText(this, "k the them",Toast.LENGTH_SHORT).show();
-        }*/
-        //hien thi
-      /*  list = tbThongTinTaiKhoan.hienthiThongTinTaiKhoan();
-        edtHo.setText(list.get(1).getHo());
-        edtTen.setText(list.get(2).getHo());
-        edtNgaySinh.setText(list.get(3).getHo());
-        edtSDT.setText(list.get(4).getHo());
-        edtDiaChi.setText(list.get(5).getHo());
-        edtEmail.setText(list.get(6).getHo());
-        mulAuTxtGhiChu.setText(list.get(7).getHo());*/
+        user = new getSetThongTinTaiKhoan(ho, ten, ngaysinh, sdt, ngaysinh, email, ghichu ,0, "", "" );
+
+        boolean tk = tbThongTinTaiKhoan.sua_ThongTinTaiKhoan(user);
+
+
     }
     public void showThongTinTaiKhoan(){
 
