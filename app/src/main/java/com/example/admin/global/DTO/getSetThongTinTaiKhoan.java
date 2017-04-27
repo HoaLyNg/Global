@@ -14,12 +14,24 @@ public class getSetThongTinTaiKhoan {
     private String email;
     private String ghichu;
 
+    public getSetThongTinTaiKhoan(int matk, String ho, String ten, String ngaysinh, int sdt, String diachi, String email, String ghichu) {
+        this.matk = matk;
+        this.ho = ho;
+        this.ten = ten;
+        this.ngaysinh = ngaysinh;
+        this.sdt = sdt;
+        this.diachi = diachi;
+        this.email = email;
+        this.ghichu = ghichu;
+    }
+
     public getSetThongTinTaiKhoan(String ho, String ten, String ngaysinh, int sdt, String diachi, String email, String ghichu){
         this.ho = ho;
         this.ten = ten;
         this.ngaysinh = ngaysinh;
         this.sdt = sdt;
         this.diachi = diachi;
+
         this.email = email;
         this.ghichu = ghichu;
     }

@@ -17,10 +17,6 @@ public class Villa {
         return maCT;
     }
 
-    public void setMaCT(int maCT) {
-        this.maCT = maCT;
-    }
-
     public String getDiachi() {
         return diachi;
     }
