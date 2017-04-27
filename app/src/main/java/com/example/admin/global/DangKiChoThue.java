@@ -25,7 +25,7 @@ public class DangKiChoThue extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ki_cho_thue);
         findViewIDDangKiChoThue();
-
+        valaDAO = new VillaDAO(getApplicationContext());
         btnXacNhanCT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

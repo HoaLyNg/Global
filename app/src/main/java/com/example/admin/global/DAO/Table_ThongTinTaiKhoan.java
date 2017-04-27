@@ -73,8 +73,15 @@ public class Table_ThongTinTaiKhoan {
             return false;
         return true;
     }
-    public void sua_ThongTinTaiKhoan(getSetThongTinTaiKhoan tttk){
+    public boolean sua_ThongTinTaiKhoan(getSetThongTinTaiKhoan tttk){
+        ContentValues values = new ContentValues();
+        values.put(THONGTINTAIKHOAN_DIACHI, tttk.getDiachi());
+        values.put(THONGTINTAIKHOAN_EMAIL, tttk.getEmail());
+        values.put(THONGTINTAIKHOAN_GHICHU, tttk.getGhichu());
 
+        int rows =  myDB.update("ThongTinTaiKhoan",values, THONGTINTAIKHOAN_MATK + " = ? ", new String[]{String.valueOf(tttk.getMatk())});
+        if(rows > 0) return true;
+        return false;
 
     }
    /* public ArrayList<getSetThongTinTaiKhoan> hienthiThongTinTaiKhoan(){

@@ -32,7 +32,7 @@ public class VillaDAO {
         values.putNull("MaCT");
         values.put("DiaChi", dept.getDiachi());
         values.put("Gia", dept.getGia());
-        values.put("GhiChu,", dept.getGhichu());
+        values.put("GhiChu", dept.getGhichu());
         values.put("MaTK", dept.getMaTK());
         values.put("X", dept.getX());
         values.put("Y", dept.getY());
