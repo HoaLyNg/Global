@@ -13,8 +13,14 @@ public class getSetThongTinTaiKhoan {
     private String diachi;
     private String email;
     private String ghichu;
+    private int loaitk;
+    private String tendangnhap;
+    private String matkhau;
 
-    public getSetThongTinTaiKhoan(String ho, String ten, String ngaysinh, int sdt, String diachi, String email, String ghichu){
+
+
+    public getSetThongTinTaiKhoan(String ho, String ten, String ngaysinh, int sdt, String diachi,
+                                  String email, String ghichu, int loaitk, String tendangnhap, String matkhau){
 
         this.ho = ho;
         this.ten = ten;
@@ -23,7 +29,36 @@ public class getSetThongTinTaiKhoan {
         this.diachi = diachi;
         this.email = email;
         this.ghichu = ghichu;
+        this.loaitk = loaitk;
+        this.tendangnhap = tendangnhap;
+        this.matkhau = matkhau;
     }
+    public void setLoaitk(int loaitk) {
+        this.loaitk = loaitk;
+    }
+
+    public void setMatkhau(String matkhau) {
+        this.matkhau = matkhau;
+    }
+
+    public void setTendangnhap(String tendangnhap) {
+        this.tendangnhap = tendangnhap;
+    }
+
+
+
+    public int getLoaitk() {
+        return loaitk;
+    }
+
+    public String getTendangnhap() {
+        return tendangnhap;
+    }
+
+    public String getMatkhau() {
+        return matkhau;
+    }
+
     public int getMatk() {
         return matk;
     }
