@@ -63,6 +63,9 @@ public class Table_ThongTinTaiKhoan {
         values.put(THONGTINTAIKHOAN_DIACHI,tttk.getDiachi());
         values.put(THONGTINTAIKHOAN_EMAIL,tttk.getEmail());
         values.put(THONGTINTAIKHOAN_GHICHU,tttk.getGhichu());
+        values.put(THONGTINTAIKHOAN_LOAITAIKHOAN,tttk.getLoaitk());
+        values.put(THONGTINTAIKHOAN_TENDANGNHAP,tttk.getTendangnhap());
+        values.put(THONGTINTAIKHOAN_MATKHAU,tttk.getMatkhau());
         long id = myDB.insert(TABLE_THONGTINTAIKHOAN,null, values);
         if(id == -1)
             return false;
@@ -85,7 +88,11 @@ public class Table_ThongTinTaiKhoan {
                 String valueDiaChi = cursor.getString(5);
                 String valueEmail = cursor.getString(6);
                 String valueGhiChu = cursor.getString(7);
-                getSetThongTinTaiKhoan tk = new getSetThongTinTaiKhoan(valueHo, valueTen, valueNgaySinh, valueSDT, valueDiaChi, valueEmail, valueGhiChu);
+                int valueLoaiTK = cursor.getInt(8);
+                String valueTenDangNhap = cursor.getString(9);
+                String valueMatKhau = cursor.getString(10);
+                getSetThongTinTaiKhoan tk = new getSetThongTinTaiKhoan(valueHo, valueTen, valueNgaySinh,
+                        valueSDT, valueDiaChi, valueEmail, valueGhiChu, valueLoaiTK, valueTenDangNhap, valueMatKhau );
                 tk.setMatk(valueMaTK);
                 taikhoan.add(tk);
                 cursor.moveToNext();
