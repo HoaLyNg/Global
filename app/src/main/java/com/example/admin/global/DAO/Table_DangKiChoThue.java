@@ -1,5 +1,10 @@
 package com.example.admin.global.DAO;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.example.admin.global.DTO.DuLieu;
+
 import static com.example.admin.global.DAO.Table_ThongTinTaiKhoan.TABLE_THONGTINTAIKHOAN;
 
 /**
@@ -7,6 +12,8 @@ import static com.example.admin.global.DAO.Table_ThongTinTaiKhoan.TABLE_THONGTIN
  */
 
 public class Table_DangKiChoThue {
+
+    SQLiteDatabase myDB;
     public static final String TABLE_DANGKICHOTHUE = "DangKiChoThue";
 
     public static String getTableDangkichothue() {
@@ -33,9 +40,16 @@ public class Table_DangKiChoThue {
     //CREATE TABLE DANG KI CHO THUE
     public static final String CREATE_TABLE_DANGKICHOTHUE ="CREATE TABLE "+TABLE_DANGKICHOTHUE+" ("
                                                             +DANGKICHOTHUE_MaCT+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                                                            +DANGKICHOTHUE_DIACHI+" TEXT, "+DANGKICHOTHUE_GIA+" TEXT, "
+                                                            +DANGKICHOTHUE_DIACHI+" TEXT, "+DANGKICHOTHUE_GIA+" REAL, "
                                                             +DANGKICHOTHUE_GHICHU+" TEXT, " +DANGKICHOTHUE_X+" REAL, "
                                                             +DANGKICHOTHUE_Y+" REAL, "+DANGKICHOTHUE_THONGTINTAIKHOAN_MATK
                                                             +" INTEGER CONSTRAINT FK_ThongTinTaiKhoan REFERENCES "
                                                             +TABLE_THONGTINTAIKHOAN+" ON UPDATE CASCADE)";
+
+    public Table_DangKiChoThue(Context context) {
+        DuLieu dulieu = new DuLieu(context);
+        myDB = dulieu.getWritableDatabase();
+    }
 }
+
+
