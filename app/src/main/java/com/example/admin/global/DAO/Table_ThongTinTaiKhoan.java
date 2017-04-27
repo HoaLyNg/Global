@@ -6,9 +6,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.admin.global.DTO.DuLieu;
+import com.example.admin.global.DTO.Villa;
 import com.example.admin.global.DTO.getSetThongTinTaiKhoan;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by User on 26/04/2017.
@@ -71,10 +73,11 @@ public class Table_ThongTinTaiKhoan {
             return false;
         return true;
     }
-    public void sua_ThongTinTaiKhoan(){
+    public void sua_ThongTinTaiKhoan(getSetThongTinTaiKhoan tttk){
+
 
     }
-    public ArrayList<getSetThongTinTaiKhoan> hienthiThongTinTaiKhoan(){
+   /* public ArrayList<getSetThongTinTaiKhoan> hienthiThongTinTaiKhoan(){
         ArrayList<getSetThongTinTaiKhoan> taikhoan = new ArrayList<getSetThongTinTaiKhoan>();
         Cursor cursor = myDB.rawQuery("SELECT * FROM "+TABLE_THONGTINTAIKHOAN, null);
         if(cursor.getCount() > 0){
@@ -99,5 +102,51 @@ public class Table_ThongTinTaiKhoan {
             }
         }
         return taikhoan;
+    }*/
+    public List<getSetThongTinTaiKhoan> hienthiThongTinTaiKhoan(){
+        List<getSetThongTinTaiKhoan> templist = new ArrayList<getSetThongTinTaiKhoan>();
+
+        String sql = "SELECT * FROM " + Table_DangKiChoThue.getTableDangkichothue();
+        Cursor cur = myDB.rawQuery(sql, null);
+        cur.moveToPosition(-1);
+        while(cur.moveToNext()){
+            getSetThongTinTaiKhoan dept = new getSetThongTinTaiKhoan(
+                    cur.getInt(cur.getColumnIndex(THONGTINTAIKHOAN_MATK)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_HO)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_TEN)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_NGAYSINH)),
+                    cur.getInt((cur.getColumnIndex(THONGTINTAIKHOAN_SDT))),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_DIACHI)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_EMAIL)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_GHICHU)),
+                    cur.getInt((cur.getColumnIndex(THONGTINTAIKHOAN_LOAITAIKHOAN))),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_TENDANGNHAP)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_MATKHAU))
+            );
+
+            templist.add(dept);
+        }
+        return templist;
+    }
+    public getSetThongTinTaiKhoan hienThi(int tk){
+        String sql = "SELECT * FROM " + Table_DangKiChoThue.getTableDangkichothue()+" WHERE MaTK = "+ tk;
+        Cursor cur = myDB.rawQuery(sql, null);
+        cur.moveToPosition(-1);
+        cur.moveToNext();
+            getSetThongTinTaiKhoan dept = new getSetThongTinTaiKhoan(
+                    cur.getInt(cur.getColumnIndex(THONGTINTAIKHOAN_MATK)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_HO)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_TEN)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_NGAYSINH)),
+                    cur.getInt((cur.getColumnIndex(THONGTINTAIKHOAN_SDT))),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_DIACHI)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_EMAIL)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_GHICHU)),
+                    cur.getInt((cur.getColumnIndex(THONGTINTAIKHOAN_LOAITAIKHOAN))),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_TENDANGNHAP)),
+                    cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_MATKHAU))
+            );
+
+        return dept;
     }
 }

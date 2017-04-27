@@ -11,21 +11,30 @@ import com.example.admin.global.DAO.Table_ThongTinTaiKhoan;
 import com.example.admin.global.DTO.getSetThongTinTaiKhoan;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ThongTinTaiKhoan extends AppCompatActivity {
 
-    private ArrayList<getSetThongTinTaiKhoan> list;
+    getSetThongTinTaiKhoan user;
     Table_ThongTinTaiKhoan tbThongTinTaiKhoan;
     EditText edtHo, edtTen, edtSDT, edtEmail, edtDiaChi, edtNgaySinh;
     MultiAutoCompleteTextView mulAuTxtGhiChu;
     Button btbXacNhan;
+    int bien;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thong_tin_tai_khoan);
         findViewIDThongTinTaiKhoan();
         tbThongTinTaiKhoan = new Table_ThongTinTaiKhoan(getApplicationContext());
-
+        user = tbThongTinTaiKhoan.hienThi(bien);
+        edtHo.setText(user.getHo().toString());
+        edtTen.setText(user.getTen().toString());
+        edtSDT.setText(String.valueOf(user.getSdt()).toString());
+        edtNgaySinh.setText(user.getNgaysinh().toString());
+        edtDiaChi.setText(user.getDiachi().toString());
+        edtEmail.setText(user.getEmail().toString());
+        mulAuTxtGhiChu.setText(user.getGhichu().toString());
     }
     public void findViewIDThongTinTaiKhoan(){
         edtHo = (EditText)findViewById(R.id.edtHo);
@@ -38,6 +47,7 @@ public class ThongTinTaiKhoan extends AppCompatActivity {
         btbXacNhan = (Button)findViewById(R.id.btnXacNhan);
     }
     public void submitXacNhan(View view){
+
        /* String ho = edtHo.getText().toString();
         String ten = edtTen.getText().toString();
         String ngaysinh = edtNgaySinh.getText().toString();
