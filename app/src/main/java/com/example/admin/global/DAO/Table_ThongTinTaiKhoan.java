@@ -129,7 +129,7 @@ public class Table_ThongTinTaiKhoan {
         return templist;
     }
     public getSetThongTinTaiKhoan hienThi(int tk){
-        String sql = "SELECT * FROM " + Table_DangKiChoThue.getTableDangkichothue()+" WHERE MaTK = "+ tk;
+        String sql = "SELECT * FROM " + TABLE_THONGTINTAIKHOAN+" WHERE MaTK = "+ tk;
         Cursor cur = myDB.rawQuery(sql, null);
         cur.moveToPosition(-1);
         cur.moveToNext();
