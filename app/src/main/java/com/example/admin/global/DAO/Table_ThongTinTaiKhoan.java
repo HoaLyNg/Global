@@ -152,19 +152,23 @@ public class Table_ThongTinTaiKhoan {
 
     public int DangNhap(String TK, String MK)
     {
-        String sql = "select" + THONGTINTAIKHOAN_MATK +", " + THONGTINTAIKHOAN_TENDANGNHAP + ", " + THONGTINTAIKHOAN_MATKHAU +
-                " where " + THONGTINTAIKHOAN_TENDANGNHAP + " like " + TK;
+        String sql = "select *" +
+                " from " + TABLE_THONGTINTAIKHOAN + " where TenDangNhap like '" + TK + "' ";
         Cursor cur = myDB.rawQuery(sql, null);
-        if(cur.getCount() == 0)
+        int t = cur.getCount();
+        if(cur.getCount() == 0) {
             return -1;
+        }
         else
         {
             cur.moveToPosition(0);
-            if(cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_MATKHAU)) == MK)
+            if(cur.getString(cur.getColumnIndex(THONGTINTAIKHOAN_MATKHAU)).equals(MK))
             {
                 return cur.getInt(cur.getColumnIndex(THONGTINTAIKHOAN_MATK));
             }
-            else return -1;
+            else {
+                return -1;
+            }
         }
     }
 }

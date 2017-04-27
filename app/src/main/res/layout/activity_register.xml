@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrV"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.admin.global.RegisterActivity">
@@ -282,13 +283,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="363dp"
             android:text="Chọn nếu là người cho thuê"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="363dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txtInfo2"
             android:layout_width="246dp"
             android:layout_height="20dp"
             android:layout_marginTop="83dp"

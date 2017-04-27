@@ -23,6 +23,8 @@ import com.example.admin.global.DAO.Table_ThongTinTaiKhoan;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_log);
 
+        TTTK = new Table_ThongTinTaiKhoan(getApplicationContext());
+
         TK = (EditText)findViewById(R.id.txtTenDN);
         MK = (EditText)findViewById(R.id.txtMK);
         DK = (TextView)findViewById(R.id.btnDangKy);
@@ -36,6 +38,7 @@ import com.example.admin.global.DAO.Table_ThongTinTaiKhoan;
             public void onClick(View v) {
                 String tTK = TK.getText().toString();
                 String tMK = MK.getText().toString();
+
                 int ID = TTTK.DangNhap(tTK,tMK);
                 if(ID == -1)
                 {

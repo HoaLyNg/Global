@@ -38,7 +38,8 @@
         <activity
             android:name=".UserLogActivity"
             android:exported="true" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".RegisterActivity"
+            android:exported="true"/>
         <activity android:name=".ThongTinTaiKhoan" />
         <activity android:name=".DangKiChoThue"></activity>
     </application>
