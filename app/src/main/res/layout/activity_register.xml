@@ -154,7 +154,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="247dp"
+            android:layout_marginTop="224dp"
             android:text="Mật khẩu:"
             android:textSize="19sp"
             android:textStyle="italic"
@@ -166,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="270dp"
+            android:layout_marginTop="247dp"
             android:ems="10"
             android:inputType="textPassword"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -188,7 +188,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="139dp"
+            android:layout_marginTop="116dp"
             android:text="Thông tin tài khoản:"
             android:textSize="24sp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -211,14 +211,14 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.054" />
+            app:layout_constraintVertical_bias="0.035" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="175dp"
+            android:layout_marginTop="152dp"
             android:text="Tên tài khoản:"
             android:textSize="19sp"
             android:textStyle="italic"
@@ -230,7 +230,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="321dp"
+            android:layout_marginTop="298dp"
             android:text="Nhập lại mật khẩu:"
             android:textSize="19sp"
             android:textStyle="italic"
@@ -242,7 +242,7 @@
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="198dp"
+            android:layout_marginTop="175dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -253,7 +253,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="344dp"
+            android:layout_marginTop="321dp"
             android:ems="10"
             android:inputType="textPassword"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -263,10 +263,9 @@
             android:id="@+id/btnDK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="907dp"
+            android:layout_marginTop="914dp"
             android:text="Đăng ký"
             android:textStyle="bold"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -277,6 +276,28 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="20dp" />
+
+        <CheckBox
+            android:id="@+id/cbxLoaiTK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Chọn nếu là người cho thuê"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="363dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="246dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="83dp"
+            android:text="Mật khẩu không giống nhau!!"
+            android:textAlignment="center"
+            android:textColor="@android:color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
