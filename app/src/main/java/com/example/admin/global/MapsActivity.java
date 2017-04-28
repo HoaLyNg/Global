@@ -74,6 +74,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         intent.putExtra("key", matk);
                         startActivity(intent);
                         break;
+                    case R.id.nav_manage:
+                        intent = new Intent(MapsActivity.this, UserLogActivity.class);
+                        intent.putExtra("key", matk);
+                        startActivity(intent);
+                        break;
                 }
                 //drawer.closeDrawer(GravityCompat.START);
                 return false;

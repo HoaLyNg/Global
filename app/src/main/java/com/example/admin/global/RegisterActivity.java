@@ -76,6 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
                     boolean flag = TTTK.them_ThongTinTaiKhoan(TKMoi);
                     if (flag == true) {
                         Toast.makeText(RegisterActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                        finish();
                     } else
                         Toast.makeText(RegisterActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
                 }
