@@ -22,20 +22,23 @@ public class UserLogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_log);
 
-        TK = (EditText) findViewById(R.id.txtTenDN);
-        MK = (EditText) findViewById(R.id.txtMK);
-        DK = (TextView) findViewById(R.id.btnDangKy);
-        QMK = (TextView) findViewById(R.id.btnQMK);
-        DN = (Button) findViewById(R.id.btnDN);
-        Info = (TextView) findViewById(R.id.txtInfo);
+
+        TTTK = new Table_ThongTinTaiKhoan(getApplicationContext());
+
+        TK = (EditText)findViewById(R.id.txtTenDN);
+        MK = (EditText)findViewById(R.id.txtMK);
+        DK = (TextView)findViewById(R.id.btnDangKy);
+        QMK = (TextView)findViewById(R.id.btnQMK);
+        DN = (Button)findViewById(R.id.btnDN);
+        Info = (TextView)findViewById(R.id.txtInfo);
 
         DN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String tTK = TK.getText().toString();
                 String tMK = MK.getText().toString();
-                int ID = TTTK.DangNhap(tTK, tMK);
-                if (ID == -1)
+                int ID = TTTK.DangNhap(tTK,tMK);
+                if(ID == -1)
                     Info.setTextColor(Color.RED);
                 else
                     Toast.makeText(UserLogActivity.this, "Dăng nhập thành công", Toast.LENGTH_SHORT).show();
