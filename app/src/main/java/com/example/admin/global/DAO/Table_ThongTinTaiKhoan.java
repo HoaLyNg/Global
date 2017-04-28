@@ -1,4 +1,4 @@
-﻿package com.example.admin.global.DAO;
+package com.example.admin.global.DAO;
 
 import android.content.ContentValues;
 import android.content.Context;

@@ -1,4 +1,4 @@
-﻿package com.example.admin.global;
+package com.example.admin.global;
 
 import android.app.Activity;
 import android.graphics.Color;
