@@ -29,7 +29,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     ActionBarDrawerToggle drawertoggle;
     Toolbar toolbar;
 
-    int matk;
+    int matk =1;
     Intent intent;
 
     @Override
@@ -58,12 +58,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 switch (item.getItemId()) {
                     case R.id.tt_taikhoan:
                         intent = new Intent(MapsActivity.this, ThongTinTaiKhoan.class);
-                        intent.putExtra("key", -1);
+                        intent.putExtra("key", matk);
                         startActivity(intent);
                         break;
                     case R.id.nav_gallery:
                         intent = new Intent(MapsActivity.this, DangKiChoThue.class);
-                        intent.putExtra("key", -1);
+                        intent.putExtra("key", matk);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_slideshow:
+                        intent = new Intent(MapsActivity.this, RegisterActivity.class);
+                        intent.putExtra("key", matk);
                         startActivity(intent);
                         break;
                 }
