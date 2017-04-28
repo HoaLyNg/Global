@@ -1,4 +1,4 @@
-package com.example.admin.global;
+﻿package com.example.admin.global;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -32,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         TTTK = new Table_ThongTinTaiKhoan(getApplicationContext());
+
 
         TK = (EditText) findViewById(R.id.txtTK);
         MK = (EditText) findViewById(R.id.txtMK);
@@ -75,14 +76,11 @@ public class RegisterActivity extends AppCompatActivity {
                     boolean flag = TTTK.them_ThongTinTaiKhoan(TKMoi);
                     if (flag == true) {
                         Toast.makeText(RegisterActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                        //Cần thêm intent qua form map
                     } else
                         Toast.makeText(RegisterActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
-
                 }
             }
         });
-
     }
 }
 

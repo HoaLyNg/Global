@@ -18,12 +18,8 @@ public class DuLieu extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "ThueNhaTro.db";
     private static final int DATABASE_VERSION = 1;
 
-
-
-
     public DuLieu(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-
     }
 
     @Override
@@ -35,7 +31,7 @@ public class DuLieu extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if (newVersion != oldVersion){
+        if (newVersion != oldVersion) {
             db.execSQL("DROP TABLE IF EXISTS " + Table_ThongTinTaiKhoan.CREATE_TABLE_THONGTINTAIKHOAN);
             db.execSQL("DROP TABLE IF EXISTS " + Table_DangKiChoThue.CREATE_TABLE_DANGKICHOTHUE);
             db.execSQL("DROP TABLE IF EXISTS " + Table_Hinh.CREATE_TABLE_HINH);

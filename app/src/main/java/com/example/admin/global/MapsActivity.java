@@ -21,7 +21,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback{
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
@@ -29,17 +29,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     ActionBarDrawerToggle drawertoggle;
     Toolbar toolbar;
 
+    int matk =1;
+    Intent intent;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState)  {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         DuLieu dulieu = new DuLieu(getApplicationContext());
         dulieu.getWritableDatabase();
 
-
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-       SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         //set new custom toolbar -> default actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -54,15 +55,28 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.tt_taikhoan:
+                        intent = new Intent(MapsActivity.this, ThongTinTaiKhoan.class);
+                        intent.putExtra("key", matk);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_gallery:
+                        intent = new Intent(MapsActivity.this, DangKiChoThue.class);
+                        intent.putExtra("key", matk);
+                        startActivity(intent);
+                        break;
+                    case R.id.nav_slideshow:
+                        intent = new Intent(MapsActivity.this, RegisterActivity.class);
+                        intent.putExtra("key", matk);
+                        startActivity(intent);
+                        break;
+                }
+                //drawer.closeDrawer(GravityCompat.START);
                 return false;
             }
         });
-
-
-
     }
-
-
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -72,7 +86,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
-   @Override
+    @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 

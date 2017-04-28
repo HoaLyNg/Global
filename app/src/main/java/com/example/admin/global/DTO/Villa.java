@@ -7,7 +7,7 @@ package com.example.admin.global.DTO;
 public class Villa {
     private int maCT;
     private String diachi;
-    private  String gia;
+    private String gia;
     private String ghichu;
     private int maTK;
     private double x;
@@ -65,7 +65,7 @@ public class Villa {
         this.y = y;
     }
 
-    public Villa(int maCT,String diachi, String gia, String ghichu, int maTK, double x, double y) {
+    public Villa(int maCT, String diachi, String gia, String ghichu, int maTK, double x, double y) {
         this.maCT = maCT;
         this.diachi = diachi;
         this.gia = gia;
