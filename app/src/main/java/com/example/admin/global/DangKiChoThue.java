@@ -23,12 +23,14 @@ public class DangKiChoThue extends AppCompatActivity {
 
     Intent intent;
     int maTaiKhoan;
-    double X,Y;
+    double X, Y;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ki_cho_thue);
         findViewIDDangKiChoThue();
+
         valaDAO = new VillaDAO(getApplicationContext());
         intent = getIntent();
         maTaiKhoan = intent.getIntExtra("key", 1);
@@ -36,10 +38,9 @@ public class DangKiChoThue extends AppCompatActivity {
         btnXacNhanCT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Villa vila = new Villa(edtDiaChiCT.getText().toString(),edtGia.getText().toString()
-                              ,mulAuTxtGhiChuCT.getText().toString(), maTaiKhoan, X, Y);
+                Villa vila = new Villa(edtDiaChiCT.getText().toString(), edtGia.getText().toString(), mulAuTxtGhiChuCT.getText().toString(), maTaiKhoan, X, Y);
                 boolean id = valaDAO.Add(vila);
-                if(id)
+                if (id)
                     Toast.makeText(DangKiChoThue.this, "Đăng kí thành công !", Toast.LENGTH_SHORT).show();
                 else
                     Toast.makeText(DangKiChoThue.this, "Thất bại", Toast.LENGTH_SHORT).show();
@@ -47,11 +48,11 @@ public class DangKiChoThue extends AppCompatActivity {
         });
     }
 
-   public void findViewIDDangKiChoThue(){
-       edtDiaChiCT = (EditText)findViewById(R.id.edtDiaChiCT);
-       edtGia = (EditText)findViewById(R.id.edtGia);
-       btnXacNhanCT = (Button)findViewById(R.id.btnXacNhanCT);
-       grvHinh = (GridView)findViewById(R.id.grvHinh);
-       mulAuTxtGhiChuCT = (MultiAutoCompleteTextView)findViewById(R.id.mulAuTxtGhiChuCT);
-   }
+    public void findViewIDDangKiChoThue() {
+        edtDiaChiCT = (EditText) findViewById(R.id.edtDiaChiCT);
+        edtGia = (EditText) findViewById(R.id.edtGia);
+        btnXacNhanCT = (Button) findViewById(R.id.btnXacNhanCT);
+        grvHinh = (GridView) findViewById(R.id.grvHinh);
+        mulAuTxtGhiChuCT = (MultiAutoCompleteTextView) findViewById(R.id.mulAuTxtGhiChuCT);
+    }
 }

@@ -24,6 +24,7 @@ public class ThongTinTaiKhoan extends AppCompatActivity {
     Button btbXacNhan;
     int bien;
     Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,31 +41,29 @@ public class ThongTinTaiKhoan extends AppCompatActivity {
         });
     }
 
-    public void findViewIDThongTinTaiKhoan(){
-        edtHo = (EditText)findViewById(R.id.edtHo);
-        edtTen = (EditText)findViewById(R.id.edtTen);
-        edtSDT = (EditText)findViewById(R.id.edtSDT);
-        edtDiaChi = (EditText)findViewById(R.id.edtDiaChi);
-        edtEmail = (EditText)findViewById(R.id.edtEmail);
-        edtNgaySinh = (EditText)findViewById(R.id.edtNgaySinh);
-        mulAuTxtGhiChu = (MultiAutoCompleteTextView)findViewById(R.id.mulAuTxtGhiChu);
-        btbXacNhan = (Button)findViewById(R.id.btnXacNhan);
+    public void findViewIDThongTinTaiKhoan() {
+        edtHo = (EditText) findViewById(R.id.edtHo);
+        edtTen = (EditText) findViewById(R.id.edtTen);
+        edtSDT = (EditText) findViewById(R.id.edtSDT);
+        edtDiaChi = (EditText) findViewById(R.id.edtDiaChi);
+        edtEmail = (EditText) findViewById(R.id.edtEmail);
+        edtNgaySinh = (EditText) findViewById(R.id.edtNgaySinh);
+        mulAuTxtGhiChu = (MultiAutoCompleteTextView) findViewById(R.id.mulAuTxtGhiChu);
+        btbXacNhan = (Button) findViewById(R.id.btnXacNhan);
     }
 
-    public void submitXacNhan(){
-
-
+    public void submitXacNhan() {
         String diachi = edtDiaChi.getText().toString();
         String email = edtEmail.getText().toString();
         String ghichu = mulAuTxtGhiChu.getText().toString();
-        user = new getSetThongTinTaiKhoan(bien, "", "", "", 0, diachi, email, ghichu , 0, "", "" );
+        user = new getSetThongTinTaiKhoan(bien, "", "", "", 0, diachi, email, ghichu, 0, "", "");
         boolean tk = tbThongTinTaiKhoan.sua_ThongTinTaiKhoan(user);
         if (tk)
             Toast.makeText(this, "Sửa thành công", Toast.LENGTH_SHORT).show();
         else Toast.makeText(this, "Không sửa được", Toast.LENGTH_SHORT).show();
     }
 
-    public void showThongTinTaiKhoan(){
+    public void showThongTinTaiKhoan() {
         intent = getIntent();
         bien = intent.getIntExtra("key", 1);
         user = tbThongTinTaiKhoan.hienThi(bien);

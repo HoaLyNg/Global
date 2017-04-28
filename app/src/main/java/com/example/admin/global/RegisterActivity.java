@@ -49,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String tMK2 = MK2.getText().toString();
                 if (!tMK.equals(tMK2))
                     //Info.setTextColor(Color.RED);
-                ;
+                    ;
                 else {
                     String tDN = DN.getText().toString();
                     String tHo = Ho.getText().toString();
@@ -62,19 +62,15 @@ public class RegisterActivity extends AppCompatActivity {
                     if (LoaiTK.isChecked())
                         tLoaiTK = 1;
                     else tLoaiTK = 0;
-                    TKMoi = new getSetThongTinTaiKhoan(tHo, tTen, tNS, tSDT, tDC,
-                            tEmail, "", tLoaiTK, tDN, tMK);
+                    TKMoi = new getSetThongTinTaiKhoan(tHo, tTen, tNS, tSDT, tDC, tEmail, "", tLoaiTK, tDN, tMK);
                     boolean flag = TTTK.them_ThongTinTaiKhoan(TKMoi);
                     if (flag == true) {
                         Toast.makeText(RegisterActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                        //Cần thêm intent qua form map
                     } else
                         Toast.makeText(RegisterActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
-
                 }
             }
         });
-
     }
 }
 
