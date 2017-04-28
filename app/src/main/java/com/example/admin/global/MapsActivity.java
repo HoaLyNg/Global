@@ -3,6 +3,8 @@ package com.example.admin.global;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
@@ -31,6 +33,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     int matk =1;
     Intent intent;
+    LatLng loca;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,11 +74,22 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         intent.putExtra("key", matk);
                         startActivity(intent);
                         break;
+                    case R.id.nav_manage:
+                        intent = new Intent(MapsActivity.this, UserLogActivity.class);
+                        intent.putExtra("key", matk);
+                        startActivity(intent);
+                        break;
                 }
                 //drawer.closeDrawer(GravityCompat.START);
                 return false;
             }
         });
+
+        LocationManager lm = (LocationManager)getSystemService(this.LOCATION_SERVICE);
+        Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        double longitude = location.getLongitude();
+        double latitude = location.getLatitude();
+        loca = new LatLng(latitude, longitude );
     }
     /**
      * Manipulates the map once available.
@@ -91,7 +105,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng vietnam = new LatLng(10.771971, 106.697845);
+        LatLng vietnam = loca;//new LatLng(10.771971, 106.697845);
         mMap.addMarker(new MarkerOptions().position(vietnam).title("Marker"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(vietnam, 18));
 
