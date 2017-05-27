@@ -10,206 +10,268 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/bgr2">
 
+
+        <Button
+            android:id="@+id/btnXacNhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="609dp"
+            android:text="Xác nhận"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:text="@string/txt_ThongTinTaiKhoan"
-            android:layout_width="320dp"
-            android:layout_height="36dp"
             android:id="@+id/txt_ThongTinTaiKhoan"
-            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="59dp"
+            android:background="@android:color/transparent"
             android:gravity="center"
-            android:background="@android:color/holo_blue_dark"
-            android:textColor="@android:color/background_light"
-            android:layout_marginStart="32dp"
+            android:text="Thông tin tài khoản"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="8dp"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:text="@string/txt_Ho"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/txtHo"
-            android:textSize="24dp"
-            android:layout_marginTop="72dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
-
-        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="@string/edt_Ho"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="143dp"
+            android:text="@string/txt_Ho"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
             android:id="@+id/edtHo"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
 
-            android:textSize="24sp"
-            android:layout_marginTop="104dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="143dp"
+            android:background="@drawable/edit_text_style"
+            android:cursorVisible="true"
+            android:inputType="textPersonName"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="26sp"
+            app:layout_constraintHorizontal_bias="0.685"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:text="@string/txt_Ten"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/txtTen"
-            android:textSize="24sp"
-            android:layout_marginTop="160dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
-
-        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="@string/edt_Ten"
+            android:layout_marginLeft="105dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="186dp"
+            android:text="@string/txt_Ten"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
             android:id="@+id/edtTen"
-            android:textSize="24sp"
-            android:layout_marginTop="192dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="186dp"
+            android:background="@drawable/edit_text_style"
+            android:cursorVisible="true"
+            android:inputType="textPersonName"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="26sp"
+            app:layout_constraintHorizontal_bias="0.232"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:text="@string/txt_NgaySinh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/txtNgaySinh"
-            android:textSize="24sp"
-            android:layout_marginTop="240dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
-
-        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="@string/edt_NgaySinh"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="228dp"
+            android:text="@string/txt_NgaySinh"
+            android:textColor="@color/colorAccent"
             android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
             android:id="@+id/edtNgaySinh"
-            android:layout_marginTop="280dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
-
-        <TextView
-            android:text="@string/txt_SDT"
-            android:layout_width="wrap_content"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:id="@+id/txtSDT"
-            android:textSize="24sp"
-            android:layout_marginTop="336dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:hint="@string/edt_SDT"
-            android:id="@+id/edtSDT"
-            android:textSize="24sp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="368dp"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:text="@string/txt_DiaChi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtDiaChi"
-            android:textSize="24sp"
-            android:layout_marginTop="424dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
-
-        <EditText
-            android:layout_width="146dp"
-            android:layout_height="49dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="228dp"
+            android:background="@drawable/edit_text_style"
+            android:cursorVisible="true"
             android:inputType="textPersonName"
-            android:hint="@string/edt_DiaChi"
-            android:textSize="24sp"
-            android:id="@+id/edtDiaChi"
-            android:layout_marginTop="456dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="16dp"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="26sp"
+            app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:text="@string/txt_Email"
+            android:id="@+id/txtSDT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:id="@+id/txtEmail"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="512dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="272dp"
+            android:text="@string/txt_SDT"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
+            android:id="@+id/edtSDT"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="269dp"
+            android:background="@drawable/edit_text_style"
+            android:cursorVisible="true"
+            android:inputType="phone"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="26sp"
+            app:layout_constraintHorizontal_bias="0.63"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtDiaChi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="@string/edt_Email"
-            android:textSize="24sp"
-            android:id="@+id/edtEmail"
-            android:layout_marginTop="544dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="309dp"
+            android:text="@string/txt_DiaChi"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtDiaChi"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="345dp"
+            android:background="@drawable/edit_text_style"
+            android:cursorVisible="true"
+            android:inputType="textPersonName"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="26sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="383dp"
+            android:text="@string/txt_Email"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.007"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="420dp"
+            android:background="@drawable/edit_text_style"
+            android:cursorVisible="true"
+            android:inputType="textEmailAddress"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="26sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <MultiAutoCompleteTextView
 
-            android:hint="@string/edt_GhiChu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
             android:id="@+id/mulAuTxtGhiChu"
-            android:layout_marginTop="600dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="360dp"
+            android:layout_height="137dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="461dp"
+            android:background="@drawable/edit_text_style"
+            android:cursorVisible="true"
+            android:hint="@string/edt_GhiChu"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginLeft="16dp" />
-
-        <Button
-
-            android:text="@string/btn_XacNhan"
-            android:onClick="submitXacNhan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnXacNhan"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@android:color/holo_blue_dark"
-            android:textColor="@color/common_google_signin_btn_text_dark_default"
-            android:foregroundGravity="center"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginStart="152dp"
-            android:layout_marginTop="700dp"
-            android:layout_marginLeft="152dp" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

@@ -19,7 +19,7 @@ public class DangKiChoThue extends AppCompatActivity {
     Button btnXacNhanCT;
     EditText edtGia, edtDiaChiCT;
     MultiAutoCompleteTextView mulAuTxtGhiChuCT;
-    GridView grvHinh;
+//    GridView grvHinh;
 
     Intent intent;
     int maTaiKhoan;
@@ -52,7 +52,7 @@ public class DangKiChoThue extends AppCompatActivity {
         edtDiaChiCT = (EditText) findViewById(R.id.edtDiaChiCT);
         edtGia = (EditText) findViewById(R.id.edtGia);
         btnXacNhanCT = (Button) findViewById(R.id.btnXacNhanCT);
-        grvHinh = (GridView) findViewById(R.id.grvHinh);
+       // grvHinh = (GridView) findViewById(R.id.grvHinh);
         mulAuTxtGhiChuCT = (MultiAutoCompleteTextView) findViewById(R.id.mulAuTxtGhiChuCT);
     }
 }

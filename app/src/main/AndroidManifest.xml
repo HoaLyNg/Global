@@ -41,8 +41,8 @@
             android:exported="true" />
         <activity android:name=".RegisterActivity"
             android:exported="true"/>
-        <activity android:name=".ThongTinTaiKhoan" />
-        <activity android:name=".DangKiChoThue"></activity>
+        <activity android:name=".ThongTinTaiKhoan"  android:exported="true"/>
+        <activity android:name=".DangKiChoThue" android:exported="true"></activity>
     </application>
 
 </manifest>
